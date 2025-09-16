@@ -26,13 +26,13 @@ namespace Landis.Extensions
             System.Uri thisAssemblyUri = new System.Uri(thisAssembly.CodeBase);
             string thisAssemblyPath = thisAssemblyUri.LocalPath;
             string thisAssemblyDir = System.IO.Path.GetDirectoryName(thisAssemblyPath);
-            defaultPath = System.IO.Path.Combine(thisAssemblyDir, @"..\extensions", "extensions.xml");
+            defaultPath = System.IO.Path.Combine(thisAssemblyDir, "..", "extensions", "extensions.xml");
             */
 
             // Edited by Makiko Shukunobe 
             string curPath = AppDomain.CurrentDomain.BaseDirectory;
-            string mainExePath = System.IO.Path.GetFullPath(System.IO.Path.Combine(curPath, @"..\"));
-            defaultPath = System.IO.Path.Combine(mainExePath, @"extensions\extensions.xml");
+            string mainExePath = System.IO.Path.GetFullPath(System.IO.Path.Combine(curPath, ".."));
+            defaultPath = System.IO.Path.Combine(mainExePath, "extensions", "extensions.xml");
             // *** End (Makiko) ***
         }
 
